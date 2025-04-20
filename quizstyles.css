@@ -1,0 +1,136 @@
+/* ====== Toon Blast-Themed Quiz Styles ====== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient(circle, #ffcc00, #ff6b81, #ff4757);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 550px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border: 7px solid #fff;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: white;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two buttons per row */
+    gap: 12px; /* Space between buttons */
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    text-transform: uppercase;
+    background: #ffcc00;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #ff9900;
+}
+
+/* Subtle wobble effect on hover */
+button:active {
+    transform: rotate(-2deg) scale(1.05);
+}
+
+#answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#answers button {
+    background: #1e90ff;
+}
+
+#answers button:hover {
+    background: #007bff;
+}
+
+.correct {
+    background: #2ed573 !important;
+    color: white;
+    transform: scale(1.1);
+}
+
+.wrong {
+    background: #ff4757 !important;
+    color: white;
+    transform: scale(1.1);
+}
+
+#timer {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff0c0c;
+    margin-top: 15px;
+}
+
+.back-button {
+    margin-top: 15px;
+    background: #ff4757;
+}
+
+.back-button:hover {
+    background: #e63946;
+}
+
+/* Responsive: Adjust layout for smaller screens */
+@media (max-width: 600px) {
+    .button-grid {
+        grid-template-columns: 1fr; /* Stack buttons in one column */
+    }
+    .container {
+        width: 100%;
+        padding: 30px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    button {
+        font-size: 18px;
+    }
+}
